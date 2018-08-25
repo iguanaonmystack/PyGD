@@ -53,7 +53,7 @@ cdef class Image:
         cdef int gdcolor
         cdef size_t points_len = len(points)
         cdef gdPoint * c_points
-        print points, color
+
         c_points = <gdPoint *>calloc(points_len, sizeof(gdPoint))
         if c_points is NULL:
             raise MemoryError('Out of memory for points')
